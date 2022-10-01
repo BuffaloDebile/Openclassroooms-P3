@@ -1,0 +1,104 @@
+/* CSS Reset start */
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* Now 10px = 1rem! */
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Set core body defaults */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Raleway, Arial, sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blinking outline indicator */
+.blink {
+  border: 4px #ff0000 solid;
+  -webkit-animation: blink 3s infinite;
+          animation: blink 3s infinite;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: #fff;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: #fff;
+  }
+}
+/* CSS Reset end */
+body {
+  background-color: #f3f4f6;
+}
+body h1 {
+  color: #9356dc;
+  font-size: 6rem;
+}/*# sourceMappingURL=styles.css.map */
