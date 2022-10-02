@@ -152,7 +152,7 @@ header section.hero a.hero-btn {
   border: 0;
   padding: 0.75rem 1.5rem;
   font-weight: 500;
-  font-size: clamp(0.2rem, 0.5rem + 1vw, 1.2rem);
+  font-size: clamp(0.8rem, 0.5rem + 1vw, 1.2rem);
   border-radius: 100px;
   color: #fff;
   background-color: #686868;
@@ -166,9 +166,66 @@ header section.hero a.hero-btn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
+section.fonctionnement {
+  width: 100%;
+  padding: 2rem;
+  margin: auto;
+}
+section.fonctionnement h3 {
+  font-size: 19px;
+  margin-bottom: 1rem;
+}
+section.fonctionnement ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section.fonctionnement li {
+  padding: 1.5rem;
+  margin: 0.5rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  position: relative;
+  width: 100%;
+}
+section.fonctionnement li::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  background: #9356dc;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 9999px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 0%;
+  top: 50%;
+}
+section.fonctionnement li div.overflow-hidden {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+section.fonctionnement li i {
+  color: #6b7280;
+  margin-right: 1rem;
+}
+section.fonctionnement li span {
+  font-size: 1rem;
+}
+
 footer {
   width: 100%;
-  min-height: 230px;
+  min-height: 100px;
+  height: 100px;
   margin: 0 auto;
   background: red;
   font-size: 1rem;
@@ -186,8 +243,4 @@ footer .footer-wrapper {
 body {
   font-family: Roboto, sans-serif;
   font-size: 1rem;
-}
-
-.main-wrapper {
-  height: calc(100vh - 230px);
 }/*# sourceMappingURL=styles.css.map */

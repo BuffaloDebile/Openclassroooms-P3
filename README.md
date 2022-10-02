@@ -38,7 +38,7 @@
 <img src="ressources/mock-ups/Accueil.png">
 </li>
 <li>
-<img src="\ressources\mock-ups\Menu - La note enchantée.png">
+<img src="\ressources\mock-ups\Menu-La-note-enchantee.png">
 </li>
 </ul>
 
