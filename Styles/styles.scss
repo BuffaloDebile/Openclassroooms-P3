@@ -5,9 +5,122 @@
 @import 'animations';
 
 body {
-  background-color: $gray-100;
-  h1 {
-    color: $purple;
-    font-size: $text-8xl;
+  color: $gray-900;
+}
+
+// Header
+
+header {
+  .logo-wrapper {
+    padding: 1rem 1.5rem;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    font-family: Shrikhand, sans-serif;
+    background: linear-gradient(45deg, #9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  section.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #f3f3f3;
+    padding: 1rem 1.5rem;
+    font-weight: $text-semibold;
+
+    i {
+      margin-right: 0.6rem;
+    }
+  }
+
+  section.hero {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background-color: #fafafa;
+
+    h2 {
+      font-size: clamp(1.4rem, 3vw, 2.1rem);
+      line-height: calc(1.2rem + 1.4vw);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-weight: $text-thin;
+      font-size: calc(0.8rem + 0.5vw);
+      margin-bottom: 1.2rem;
+    }
+
+    a.hero-btn {
+      display: inline-block;
+      border: 0;
+      padding: 0.75rem 1.5rem;
+      font-weight: 500;
+      font-size: clamp(0.2rem, 0.5rem + 1vw, 1.2rem);
+      border-radius: 100px;
+      color: #fff;
+      background-color: #686868;
+      background-image: linear-gradient(
+        0deg,
+        rgba(147, 86, 220, 0.9),
+        rgba(255, 121, 218, 0.9)
+      );
+      cursor: pointer;
+      transition-duration: 0.25s;
+      box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  // Fonctionnement
+
+  // Footer
+}
+
+footer {
+  width: 100%;
+  min-height: 230px;
+  margin: 0 auto;
+  background: red;
+  font-size: $text-base;
+
+  .footer-wrapper {
+    margin: 0 auto;
+    width: 1440px;
+    max-width: 100%;
+    padding: 0 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+// Stick footer to the bottom
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: $text-base;
+}
+
+.main-wrapper {
+  height: calc(100vh - 230px);
 }
