@@ -6,6 +6,8 @@
 
 body {
   color: $gray-900;
+  font-family: Roboto, sans-serif;
+  font-size: $text-base;
 
   h3 {
     font-size: 21px;
@@ -162,13 +164,107 @@ section.fonctionnement {
   }
 }
 
+section.restaurant {
+  background-color: #f6f6f6;
+  padding: 2rem;
+  margin: auto;
+
+  div.card-wrapper {
+    display: grid;
+  }
+
+  div.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: $rounded-xl-2;
+    overflow: hidden;
+    background-color: #ffff;
+    position: relative;
+
+    &.nouveau::before {
+      content: 'Nouveau';
+      position: absolute;
+      background-color: $green;
+      color: $dark-green;
+      padding: 0.4rem 0.6rem;
+      border-radius: $rounded-DEFAULT;
+      right: 15px;
+      top: 15px;
+      font-size: clamp($text-xs, $text-sm + 0.2vw, $text-lg);
+    }
+
+    a {
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+      color: $gray-900;
+    }
+
+    h4 {
+      font-size: $text-lg;
+    }
+
+    p {
+      font-size: $text-base;
+    }
+
+    div.bottom-card {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .text-container {
+        flex: 1;
+      }
+
+      .like-btn {
+        position: relative;
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1s all ease-in-out;
+
+        i.heart-full {
+          color: linear-gradient(0deg, #9356dc, #ff79da);
+          background: linear-gradient(#9356dc, #ff79da);
+          font-weight: 600;
+          transform: scale(0);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          &:hover {
+            transform: scale(1);
+          }
+        }
+
+        i {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: clamp(1rem, 1.3rem + 2vw, 2.5rem);
+          transition: 0.4s all ease-in-out;
+
+          &:hover {
+            color: #9356dc;
+          }
+        }
+      }
+    }
+  }
+}
+
 footer {
   width: 100%;
   margin: 0 auto;
   background: #353535;
   font-size: $text-base;
   color: #ffff;
-  padding: 1rem;
+  padding: 2rem;
 
   span.logo {
     font-family: Shrikhand, sans-serif;
@@ -192,17 +288,9 @@ footer {
     margin: 0 auto;
     width: 1440px;
     max-width: 100%;
-    padding: 0 32px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
   }
-}
-
-// Stick footer to the bottom
-
-body {
-  font-family: Roboto, sans-serif;
-  font-size: $text-base;
 }

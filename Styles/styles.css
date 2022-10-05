@@ -97,6 +97,8 @@ select {
 /* CSS Reset end */
 body {
   color: #111827;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
 }
 body h3 {
   font-size: 21px;
@@ -225,13 +227,94 @@ section.fonctionnement li span {
   font-size: 1rem;
 }
 
+section.restaurant {
+  background-color: #f6f6f6;
+  padding: 2rem;
+  margin: auto;
+}
+section.restaurant div.card-wrapper {
+  display: grid;
+}
+section.restaurant div.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+}
+section.restaurant div.card.nouveau::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.25rem;
+  right: 15px;
+  top: 15px;
+  font-size: clamp(0.75rem, 0.875rem + 0.2vw, 1.125rem);
+}
+section.restaurant div.card a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #111827;
+}
+section.restaurant div.card h4 {
+  font-size: 1.125rem;
+}
+section.restaurant div.card p {
+  font-size: 1rem;
+}
+section.restaurant div.card div.bottom-card {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.restaurant div.card div.bottom-card .text-container {
+  flex: 1;
+}
+section.restaurant div.card div.bottom-card .like-btn {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s all ease-in-out;
+}
+section.restaurant div.card div.bottom-card .like-btn i.heart-full {
+  color: linear-gradient(0deg, #9356dc, #ff79da);
+  background: linear-gradient(#9356dc, #ff79da);
+  font-weight: 600;
+  transform: scale(0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section.restaurant div.card div.bottom-card .like-btn i.heart-full:hover {
+  transform: scale(1);
+}
+section.restaurant div.card div.bottom-card .like-btn i {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 1.3rem + 2vw, 2.5rem);
+  transition: 0.4s all ease-in-out;
+}
+section.restaurant div.card div.bottom-card .like-btn i:hover {
+  color: #9356dc;
+}
+
 footer {
   width: 100%;
   margin: 0 auto;
   background: #353535;
   font-size: 1rem;
   color: white;
-  padding: 1rem;
+  padding: 2rem;
 }
 footer span.logo {
   font-family: Shrikhand, sans-serif;
@@ -252,14 +335,8 @@ footer .footer-wrapper {
   margin: 0 auto;
   width: 1440px;
   max-width: 100%;
-  padding: 0 32px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-evenly;
-}
-
-body {
-  font-family: Roboto, sans-serif;
-  font-size: 1rem;
 }/*# sourceMappingURL=styles.css.map */
