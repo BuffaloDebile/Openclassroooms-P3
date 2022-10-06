@@ -95,6 +95,33 @@ select {
   }
 }
 /* CSS Reset end */
+.like-btn {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all ease-out;
+}
+.like-btn i {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 1.3rem + 2vw, 2.5rem);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.like-btn i:hover {
+  background: linear-gradient(#9356dc, #ff79da);
+  color: #fff;
+  font-weight: 600;
+  transform: scale(1.2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 body {
   color: #111827;
   font-family: Roboto, sans-serif;
@@ -275,37 +302,6 @@ section.restaurant div.card div.bottom-card {
 }
 section.restaurant div.card div.bottom-card .text-container {
   flex: 1;
-}
-section.restaurant div.card div.bottom-card .like-btn {
-  position: relative;
-  height: 3rem;
-  width: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 1s all ease-in-out;
-}
-section.restaurant div.card div.bottom-card .like-btn i.heart-full {
-  color: linear-gradient(0deg, #9356dc, #ff79da);
-  background: linear-gradient(#9356dc, #ff79da);
-  font-weight: 600;
-  transform: scale(0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-section.restaurant div.card div.bottom-card .like-btn i.heart-full:hover {
-  transform: scale(1);
-}
-section.restaurant div.card div.bottom-card .like-btn i {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: clamp(1rem, 1.3rem + 2vw, 2.5rem);
-  transition: 0.4s all ease-in-out;
-}
-section.restaurant div.card div.bottom-card .like-btn i:hover {
-  color: #9356dc;
 }
 
 footer {

@@ -1,0 +1,30 @@
+// Bouton Like
+
+.like-btn {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all ease-out;
+
+  i {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 1.3rem + 2vw, 2.5rem);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(#9356dc, #ff79da);
+      color: #fff;
+      font-weight: 600;
+      transform: scale(1.2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

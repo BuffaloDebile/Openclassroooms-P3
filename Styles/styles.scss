@@ -218,42 +218,6 @@ section.restaurant {
       .text-container {
         flex: 1;
       }
-
-      .like-btn {
-        position: relative;
-        height: 3rem;
-        width: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 1s all ease-in-out;
-
-        i.heart-full {
-          color: linear-gradient(0deg, #9356dc, #ff79da);
-          background: linear-gradient(#9356dc, #ff79da);
-          font-weight: 600;
-          transform: scale(0);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-
-          &:hover {
-            transform: scale(1);
-          }
-        }
-
-        i {
-          position: absolute;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: clamp(1rem, 1.3rem + 2vw, 2.5rem);
-          transition: 0.4s all ease-in-out;
-
-          &:hover {
-            color: #9356dc;
-          }
-        }
-      }
     }
   }
 }
