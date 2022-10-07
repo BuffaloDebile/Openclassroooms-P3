@@ -17,12 +17,14 @@
     font-size: clamp(1rem, 1.3rem + 2vw, 2.5rem);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    width: 3rem;
 
     &:hover {
       background: linear-gradient(#9356dc, #ff79da);
       color: #fff;
       font-weight: 600;
       transform: scale(1.2);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
