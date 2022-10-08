@@ -2,6 +2,10 @@
 /* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 *,
 *::before,
 *::after {
@@ -208,8 +212,7 @@ header section.hero a.hero-btn:hover {
 section.fonctionnement {
   width: 100%;
   padding: 2rem;
-  margin: auto;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 section.fonctionnement ol {
@@ -278,7 +281,7 @@ section.restaurant div.card-wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
@@ -287,7 +290,7 @@ section.restaurant div.card-wrapper {
   }
 }
 section.restaurant h3 {
-  max-width: 1500px;
+  max-width: 1200px;
   margin: auto;
   margin-bottom: 1rem;
 }
@@ -381,4 +384,35 @@ footer .footer-wrapper {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+header .header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .header-wrapper h1 {
+  color: #1f2937;
+  -webkit-text-fill-color: #1f2937;
+}
+header .header-wrapper a.logo {
+  flex: 1 1 100%;
+  text-align: center;
+}
+header .header-wrapper a.back-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translate(-50%, -50%);
+}
+header .header-wrapper a.back-arrow:active {
+  color: #111827;
+}
+header .header-wrapper a.back-arrow i {
+  font-size: 1.5rem;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,39 @@
+@use 'variables';
+
+header {
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    h1 {
+      color: $gray-800;
+      -webkit-text-fill-color: $gray-800;  
+    }
+
+    a.logo {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+
+    a.back-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0.5rem;
+      position: absolute;
+      top: 50%;
+      left: 3rem;
+      transform: translate(-50%, -50%);
+
+      &:active {
+        color: $gray-900;
+      }
+
+      i {
+        font-size: $text-xl;
+      }
+    }
+  }
+}
