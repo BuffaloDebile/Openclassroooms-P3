@@ -43,4 +43,4 @@
 </ul>
 
 <p>Project started on : 01/10/2022</p>
-<p>Project Completed on : 00/00/2022 </p>
+<p>Project Completed on : 09/10/2022 </p>
