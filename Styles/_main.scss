@@ -132,7 +132,7 @@ section.fonctionnement {
     margin: 0.5rem 0.75rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
     border-radius: 1.25rem;
-    background-color: #f6f6f6;
+    background-color: $gray-bg;
     position: relative;
     width: 100%;
 
@@ -173,19 +173,19 @@ section.fonctionnement {
 // Restaurant - homepage
 
 section.restaurant {
-  background-color: #f6f6f6;
+  background-color: $gray-bg;
   padding: 2rem;
   margin: auto;
 
   div.card-wrapper {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 
     @media screen and (min-width: $md) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 

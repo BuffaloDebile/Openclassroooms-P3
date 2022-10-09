@@ -9,7 +9,7 @@ header {
 
     h1 {
       color: $gray-800;
-      -webkit-text-fill-color: $gray-800;  
+      -webkit-text-fill-color: $gray-800;
     }
 
     a.logo {
@@ -26,6 +26,7 @@ header {
       top: 50%;
       left: 3rem;
       transform: translate(-50%, -50%);
+      color: $gray-900;
 
       &:active {
         color: $gray-900;
@@ -34,6 +35,164 @@ header {
       i {
         font-size: $text-xl;
       }
+    }
+  }
+
+  img.hero-img {
+    max-height: 32rem;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+main.menu-container {
+  background-color: $gray-50;
+  z-index: 1;
+  border-radius: $rounded-xl-4 $rounded-xl-4 0 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: -4rem;
+  position: relative;
+  box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+
+  div.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0 2rem;
+
+    i {
+      font-size: $text-3xl;
+    }
+
+    h2 {
+      font-family: Shrikhand, 'cursive';
+    }
+  }
+
+  div.submenu-carte {
+    max-width: 100%;
+    padding: 0 2rem;
+
+    @media screen and (min-width: $lg) {
+      column-gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    h3 {
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 0.5rem;
+      font-weight: 400;
+
+      &::after {
+        content: '';
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $green;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    section.plat {
+      background-color: #fff;
+      padding: 1rem;
+      display: flex;
+      border-radius: 0.75rem;
+      margin: 1rem 0;
+      box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+      overflow: hidden;
+      cursor: pointer;
+      animation: itemAppear 0.6s;
+      animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+      animation-fill-mode: both;
+      max-width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      section.confirmation {
+        background-color: $green;
+        margin: -1rem -5rem -1rem 1rem;
+        height: 5rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.5s;
+        margin-right: -1rem;
+
+        div.icon-wrapper {
+          height: 1.6rem;
+          width: 1.6rem;
+          background-color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100px;
+          transform: rotate(180deg);
+          transition-duration: 0.5s;
+
+          i {
+            color: $green;
+          }
+        }
+      }
+
+      div.plat-wrapper {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        flex: 1;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      span.plat-price {
+        font-weight: $text-bold;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+      h4 {
+        font-weight: $text-bold;
+      }
+
+      h4,
+      p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+
+  div.cta-wrapper {
+    margin: 1.8rem 0 0 0;
+    padding: 0 2rem 3rem 2rem;
+    display: flex;
+    justify-content: center;
+
+    button.cta {
+      border: 0;
+      padding: 0.75rem 1.5rem;
+      font-weight: $text-normal;
+      font-size: $text-base;
+      border-radius: $rounded-full;
+      color: #fff;
+      background-color: #686868;
+      background-image: linear-gradient(
+        0deg,
+        rgba(147, 86, 220, 0.9),
+        rgba(255, 121, 218, 0.9)
+      );
+      transition-duration: 0.25s;
+      box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+      cursor: pointer;
     }
   }
 }

@@ -279,14 +279,14 @@ section.restaurant {
 }
 section.restaurant div.card-wrapper {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   section.restaurant div.card-wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 section.restaurant h3 {
@@ -409,10 +409,155 @@ header .header-wrapper a.back-arrow {
   top: 50%;
   left: 3rem;
   transform: translate(-50%, -50%);
+  color: #111827;
 }
 header .header-wrapper a.back-arrow:active {
   color: #111827;
 }
 header .header-wrapper a.back-arrow i {
   font-size: 1.5rem;
+}
+header img.hero-img {
+  max-height: 32rem;
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main.menu-container {
+  background-color: #f9fafb;
+  z-index: 1;
+  border-radius: 2rem 2rem 0 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: -4rem;
+  position: relative;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+}
+main.menu-container div.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 0 2rem;
+}
+main.menu-container div.menu-header i {
+  font-size: 1.875rem;
+}
+main.menu-container div.menu-header h2 {
+  font-family: Shrikhand, "cursive";
+}
+main.menu-container div.submenu-carte {
+  max-width: 100%;
+  padding: 0 2rem;
+}
+@media screen and (min-width: 1024px) {
+  main.menu-container div.submenu-carte {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+main.menu-container div.submenu-carte h3 {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+}
+main.menu-container div.submenu-carte h3::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+main.menu-container div.submenu-carte section.plat {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-animation: itemAppear 0.6s;
+          animation: itemAppear 0.6s;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+main.menu-container div.submenu-carte section.plat section.confirmation {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  height: 5rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  margin-right: -1rem;
+}
+main.menu-container div.submenu-carte section.plat section.confirmation div.icon-wrapper {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+main.menu-container div.submenu-carte section.plat section.confirmation div.icon-wrapper i {
+  color: #99e2d0;
+}
+main.menu-container div.submenu-carte section.plat div.plat-wrapper {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main.menu-container div.submenu-carte section.plat span.plat-price {
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+main.menu-container div.submenu-carte section.plat h4 {
+  font-weight: 700;
+}
+main.menu-container div.submenu-carte section.plat h4,
+main.menu-container div.submenu-carte section.plat p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main.menu-container div.cta-wrapper {
+  margin: 1.8rem 0 0 0;
+  padding: 0 2rem 3rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+main.menu-container div.cta-wrapper button.cta {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 9999px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
