@@ -107,12 +107,12 @@ main.menu-container {
       box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
       overflow: hidden;
       cursor: pointer;
-      animation: itemAppear 0.6s;
-      animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-      animation-fill-mode: both;
       max-width: 100%;
       justify-content: space-between;
       align-items: flex-end;
+      transform: scale(0);
+      animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+      animation-fill-mode: both;
 
       section.confirmation {
         background-color: $green;
@@ -123,7 +123,6 @@ main.menu-container {
         align-items: center;
         justify-content: center;
         transition-duration: 0.5s;
-        margin-right: -1rem;
 
         div.icon-wrapper {
           height: 1.6rem;
@@ -134,7 +133,8 @@ main.menu-container {
           justify-content: center;
           border-radius: 100px;
           transform: rotate(180deg);
-          transition-duration: 0.5s;
+          transition-duration: 0.4s;
+          transition-delay: 0.1s;
 
           i {
             color: $green;

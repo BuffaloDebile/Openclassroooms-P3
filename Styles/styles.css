@@ -128,6 +128,313 @@ select {
   -webkit-text-fill-color: transparent;
 }
 
+main.menu-container div.submenu-carte section.plat:hover section.confirmation {
+  margin-right: -1rem;
+}
+main.menu-container div.submenu-carte section.plat:hover section.confirmation div.icon-wrapper {
+  transform: rotate(0deg);
+}
+
+section.submenu > section.plat:nth-child(2) {
+  -webkit-animation: apparition 0.8s;
+          animation: apparition 0.8s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+section.submenu > section.plat:nth-child(3) {
+  -webkit-animation: apparition 0.8s;
+          animation: apparition 0.8s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+section.submenu > section.plat:nth-child(4) {
+  -webkit-animation: apparition 0.8s;
+          animation: apparition 0.8s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+section.submenu > section.plat:nth-child(5) {
+  -webkit-animation: apparition 0.8s;
+          animation: apparition 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+header section.hero a.hero-btn:hover,
+main.menu-container div.cta-wrapper button.cta:hover {
+  background-color: #fff;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body > div.preloader {
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: #fff;
+  opacity: 100%;
+  inset: 0;
+  -webkit-animation: preloader 0.4s forwards;
+          animation: preloader 0.4s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    width: 10%;
+    transform: rotate(0deg);
+  }
+  10% {
+    left: 0%;
+    transform: rotate(0deg);
+  }
+  20% {
+    width: 0%;
+    left: 20%;
+  }
+  30% {
+    width: 25%;
+  }
+  50% {
+    left: 15%;
+    width: 35%;
+  }
+  70% {
+    width: 30%;
+    left: 18%;
+    transform: rotate(240deg);
+  }
+  90% {
+    width: 30%;
+    left: 10%;
+  }
+  100% {
+    width: 2%;
+    left: 25%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    width: 10%;
+    transform: rotate(0deg);
+  }
+  10% {
+    left: 0%;
+    transform: rotate(0deg);
+  }
+  20% {
+    width: 0%;
+    left: 20%;
+  }
+  30% {
+    width: 25%;
+  }
+  50% {
+    left: 15%;
+    width: 35%;
+  }
+  70% {
+    width: 30%;
+    left: 18%;
+    transform: rotate(240deg);
+  }
+  90% {
+    width: 30%;
+    left: 10%;
+  }
+  100% {
+    width: 2%;
+    left: 25%;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes pan {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top right;
+  }
+  10% {
+    transform: rotate(-2deg);
+    transform-origin: top right;
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes pan {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top right;
+  }
+  10% {
+    transform: rotate(-2deg);
+    transform-origin: top right;
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes shadow {
+  0% {
+    width: 30%;
+  }
+  50% {
+    width: 40%;
+    left: 20px;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes shadow {
+  0% {
+    width: 30%;
+  }
+  50% {
+    width: 40%;
+    left: 20px;
+  }
+  100% {
+    width: 30%;
+  }
+}
+.pan-loader {
+  width: 180px;
+  height: 180px;
+  margin: 100px auto;
+}
+.pan-loader .loader {
+  position: relative;
+  top: 10%;
+  left: 0;
+  z-index: -1;
+  width: 60%;
+  height: 45%;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #ff79da;
+  border-radius: 50%;
+  -webkit-animation: loader 1.5s infinite;
+          animation: loader 1.5s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.pan-loader .pan-container {
+  display: flex;
+  width: 100%;
+  -webkit-animation: pan 1.5s infinite;
+          animation: pan 1.5s infinite;
+}
+.pan-loader .pan {
+  width: 60%;
+  height: 20px;
+  background: linear-gradient(#ff79da, #9356dc);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.pan-loader .handle {
+  width: 40%;
+  height: 10px;
+  background: linear-gradient(#ff79da, #9356dc);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.pan-loader .shadow {
+  position: relative;
+  top: 15%;
+  left: 15%;
+  width: 30%;
+  height: 8px;
+  background: lightgray;
+  border-radius: 20px;
+  -webkit-animation: shadow 1.5s infinite;
+          animation: shadow 1.5s infinite;
+}
+
+span.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff79da;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  -webkit-animation: opacity 0.5s 0ms linear alternate infinite both;
+          animation: opacity 0.5s 0ms linear alternate infinite both;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-left: -1rem;
+}
+
+@-webkit-keyframes preloader {
+  100% {
+    opacity: 0%;
+    z-index: -10;
+    visibility: hidden;
+  }
+}
+
+@keyframes preloader {
+  100% {
+    opacity: 0%;
+    z-index: -10;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
 body {
   color: #111827;
   font-family: Roboto, sans-serif;
@@ -203,10 +510,6 @@ header section.hero a.hero-btn {
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-}
-header section.hero a.hero-btn:hover {
-  background-color: #fff;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
 section.fonctionnement {
@@ -313,6 +616,10 @@ section.restaurant div.card.nouveau::before {
   right: 15px;
   top: 15px;
   font-size: clamp(0.75rem, 0.875rem + 0.2vw, 1.125rem);
+  -webkit-animation: opacity 1s 0ms linear alternate infinite both;
+          animation: opacity 1s 0ms linear alternate infinite both;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
 }
 section.restaurant div.card img {
   height: 70%;
@@ -483,15 +790,14 @@ main.menu-container div.submenu-carte section.plat {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  -webkit-animation: itemAppear 0.6s;
-          animation: itemAppear 0.6s;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  transform: scale(0);
   -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
           animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  max-width: 100%;
-  justify-content: space-between;
-  align-items: flex-end;
 }
 main.menu-container div.submenu-carte section.plat section.confirmation {
   background-color: #99e2d0;
@@ -502,7 +808,6 @@ main.menu-container div.submenu-carte section.plat section.confirmation {
   align-items: center;
   justify-content: center;
   transition-duration: 0.5s;
-  margin-right: -1rem;
 }
 main.menu-container div.submenu-carte section.plat section.confirmation div.icon-wrapper {
   height: 1.6rem;
@@ -513,7 +818,8 @@ main.menu-container div.submenu-carte section.plat section.confirmation div.icon
   justify-content: center;
   border-radius: 100px;
   transform: rotate(180deg);
-  transition-duration: 0.5s;
+  transition-duration: 0.4s;
+  transition-delay: 0.1s;
 }
 main.menu-container div.submenu-carte section.plat section.confirmation div.icon-wrapper i {
   color: #99e2d0;
