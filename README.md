@@ -24,7 +24,7 @@
 <h2>Material & resources </h2>
 
 <ul>
-<li>TThe font for the text is "Roboto", for the logo and the title the font is "Shrikhand".</li>
+<li>The font for the text is "Roboto", for the logo and the title the font is "Shrikhand".</li>
 <li>The icons comes from Fonte Awesome.</li>
 <li>The colors used are: purple #9356DC; pink #FF79DA; green #99E2D0.</li>
 <li>All images are also delivered in xl format.</li>
