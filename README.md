@@ -1,6 +1,6 @@
 <h1>Project 3 OpenClassrooms - Make a website dynamic with CSS animations.</h1>
 
-<p>A live version of the project can be found at this <a href="#" target="_blank">link  </a></p>
+<p>A live version of the project can be found at this <a href="https://buffalodebile.github.io/Openclassroooms-P3/" target="_blank">link  </a></p>
 
 <h2>Skills assessed :</h2>
 
